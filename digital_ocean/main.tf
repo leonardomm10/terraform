@@ -1,16 +1,3 @@
-terraform {
-  required_providers {
-    digitalocean = {
-      source  = "digitalocean/digitalocean"
-      version = "2.23.0"
-    }
-  }
-}
-
-provider "digitalocean" {
-  token = var.do_token
-}
-
 resource "digitalocean_droplet" "webapp" {
   image    = "centos-7-x64"
   name     = "webapp"
